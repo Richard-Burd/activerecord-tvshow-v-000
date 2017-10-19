@@ -8,8 +8,8 @@ class Show < ActiveRecord::Base
   end
 
   def self.most_popular_show
-#    self.where("rating = ?", self.highest_rating)[0]
-   self.where("rating = ?", self.maximum(:rating))[0]
+    self.where("rating = ?", self.highest_rating)[0]
+#   self.where("rating = ?", self.maximum(:rating))[0]
 #   self.where("rating = self.maximum(:rating)")[0] <=# Ooooh, that's dangerious!
 #   binding.pry
   end
